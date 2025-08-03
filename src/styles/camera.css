@@ -1,0 +1,23 @@
+.camera-area {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin-top: 10px;
+  border: none;
+}
+
+.camera-title {
+  text-align: left;
+  padding-left: 10px;
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.canvas {
+  background: transparent;
+  border-radius: 30px;
+  background-color: black;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+}

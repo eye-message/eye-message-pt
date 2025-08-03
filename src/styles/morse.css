@@ -1,0 +1,62 @@
+.morse-wrapper {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.morse-wrapper.single {
+  justify-content: flex-start; /* 혹은 center */
+}
+
+.dot {
+  background-color: green;
+  border-radius: 50%; /* 동그란 점 */
+}
+
+.dash {
+  background-color: green;
+  border-radius: 10px; /* 둥근 사각형 대시 */
+}
+
+.morse-wrapper.small {
+  width: 90px;
+}
+
+.morse-wrapper.middle {
+  width: 170px;
+}
+
+.morse-wrapper.large {
+  width: 300px;
+}
+
+.dot.small {
+  width: 8px;
+  height: 8px;
+}
+
+.dash.small {
+  width: 20px;
+  height: 8px;
+}
+
+.dot.middle {
+  width: 15px;
+  height: 15px;
+}
+
+.dash.middle {
+  width: 40px;
+  height: 15px;
+}
+
+.dot.large {
+  width: 25px;
+  height: 25px;
+}
+
+.dash.large {
+  width: 70px;
+  height: 25px;
+  border-radius: 20px;
+}

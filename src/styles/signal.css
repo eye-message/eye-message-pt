@@ -1,0 +1,57 @@
+.morse-area {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  border: none;
+  margin-top: 10px;
+}
+
+.morse-title {
+  text-align: left;
+  padding-left: 10px;
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.morse-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f4f8;
+  border-radius: 30px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+  height: 220px;
+}
+
+.morse-signal {
+  width: max-content;
+  display: flex;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.morse-bit {
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+}
+
+.morse-bit.dot {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #4caf50;
+}
+
+.morse-bit.dash {
+  border-radius: 30px;
+  width: 80px;
+  height: 40px;
+  color: #2196f3;
+}
+
+.morse-bit.empty {
+  color: #ccc;
+}

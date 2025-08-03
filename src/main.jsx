@@ -1,18 +1,19 @@
-import { StrictMode } from "react";
+import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.jsx";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
+import Layout from "./layout/Layout.jsx";
+import MobileChat from "./component/MobileChat.jsx";
+
+import "./styles/index.css";
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <Routes>
-          <Route path="/" element={<MediaPipe />} />
-          <Route path="/chat-test" element={<Chat />} />
-          <Route path="/mobile" element={<MobileChat />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Layout />} />
+        <Route path="/mobile" element={<MobileChat />} />
+      </Routes>
     </Router>
   );
 };

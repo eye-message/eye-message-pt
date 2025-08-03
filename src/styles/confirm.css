@@ -1,0 +1,30 @@
+.confirm-menu {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  gap: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.confirm-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.morse-symbol.dot.large {
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.morse-symbol.dash.large {
+  width: 70px;
+  height: 25px;
+  background-color: green;
+  border-radius: 20px;
+  display: inline-block;
+}
