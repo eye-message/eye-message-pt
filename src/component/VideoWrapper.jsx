@@ -6,8 +6,6 @@ const VideoWrapper = ({ setMessages, setPipeStatus }) => {
 
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
-  // 이곳에는 mideapipe 카메라 설정하는 부분과
-  // 입력받은 시그널을 관리하는 부분
 
   return (
     <>
