@@ -6,12 +6,14 @@ import Layout from "./layout/Layout.jsx";
 import MobileChat from "./component/MobileChat.jsx";
 
 import "./styles/index.css";
+import LoginPage from "./component/LoginPage.jsx";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Layout />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/main" element={<Layout />} />
         <Route path="/mobile" element={<MobileChat />} />
       </Routes>
     </Router>
