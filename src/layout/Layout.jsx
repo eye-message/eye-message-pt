@@ -8,6 +8,7 @@ import Toast from "../component/Toast";
 import VideoWrapper from "../component/VideoWrapper";
 
 import "../styles/layout.css";
+import MessageWrapper from "./MessageWrapper";
 
 const Layout = () => {
   const [messages, setMessages] = useState([]); // 사용자 입력 부호와 일치하는 메세지
@@ -20,8 +21,7 @@ const Layout = () => {
       <TopNavbar />
       <div className="content-area">
         <div className="left-area">
-          <Messages />
-          <Feed messages={messages} />
+          <MessageWrapper />
         </div>
         <div className="right-area">
           <VideoWrapper
