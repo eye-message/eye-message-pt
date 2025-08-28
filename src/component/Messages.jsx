@@ -1,8 +1,30 @@
-import MESSAGES from "../constants/mockMessage";
-import "../styles/Messages.css";
+import { useEffect, useState } from "react";
+import { useTemplateStore } from "../store/templateStore";
+
 import Morse from "./Morse";
+import "../styles/messages.css";
 
 const Messages = () => {
+  const [menuList, setMenuList] = useState([]);
+  const toBinaryString = (decimal) => decimal.toString(2).padStart(5, "0");
+  const { templates } = useTemplateStore();
+
+  useEffect(() => {
+    if (templates.length !== 0) {
+      const binaryList = Array.from({ length: 20 }, (_, i) =>
+        toBinaryString(i + 1)
+      );
+      const menuObject = templates.map((template, index) => {
+        return {
+          code: binaryList[index],
+          value: template,
+        };
+      });
+
+      setMenuList(menuObject);
+    }
+  }, [templates]);
+
   return (
     <section className="message-area">
       <span className="message-title">Messages</span>
@@ -12,21 +34,23 @@ const Messages = () => {
           <div className="header-2">상태</div>
           <div className="header-3">모스코드</div>
         </div>
-        {Object.entries(MESSAGES).map(([code, data], index) => (
-          <li className="message-item" key={code}>
+        {menuList.map((template, index) => (
+          <li className="message-item" key={template.code}>
             <div className="message-usable">
-              <span className="msg">{`${index + 1}. ${data.message}`}</span>
+              <span className="msg">{`${index + 1}. ${
+                template.value.message
+              }`}</span>
               <span
                 className={`status-tag ${
-                  data.type === "urgent" ? "urgent" : "normal"
+                  template.value.status === "HIGH" ? "urgent" : "normal"
                 }`}
               >
-                {data.type === "urgent" ? "긴급" : "일반"}
+                {template.value.status === "HIGH" ? "긴급" : "일반"}
               </span>
             </div>
 
             <div className="message-code">
-              <Morse binaryStr={code} size="small" />
+              <Morse binaryStr={template.code} size="small" />
             </div>
           </li>
         ))}

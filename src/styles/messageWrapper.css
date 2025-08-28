@@ -1,0 +1,32 @@
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.92;
+  }
+}
+
+.error-box {
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff3f3;
+  border: 1px solid #ffdddd;
+}
+
+.error-message {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.skeleton-box {
+  padding: 12px;
+  border-radius: 8px;
+  background: #f3efe9;
+  border: 1px solid #e6e1da;
+  height: 140px;
+  animation: pulse 1.2s infinite;
+}
