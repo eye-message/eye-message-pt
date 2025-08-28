@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useTemplateStore } from "../store/templateStore";
 
 import Morse from "./Morse";
-import "../styles/Messages.css";
+import "../styles/messages.css";
 
 const Messages = () => {
   const [menuList, setMenuList] = useState([]);
