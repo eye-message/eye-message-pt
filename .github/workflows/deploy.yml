@@ -2,7 +2,7 @@ name: Deploy Vite to S3 (dev)
 
 on:
   push:
-    branches: [dev]
+    branches: [dev, feat/*]
   pull_request:
     types: [closed]
     branches: [dev]
