@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TopNavbar from "./TopNavbar"; // 이미 쓰던 네비게이션 재사용
+import TopNavbar from "./TopNavbar";
 import "../styles/loginPage.css";
 import axios from "axios";
 import { API_URL } from "../constants/config";
@@ -37,7 +37,7 @@ function LoginPage() {
             `로그인에 실패했습니다. ${result.status} 에러: ${result.message}`
           );
         } else {
-          useAuthStore.getState().setUser(result);
+          useAuthStore.getState().setUser(result.auth);
           navigate("/main");
         }
       })
